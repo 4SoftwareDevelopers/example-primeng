@@ -9,6 +9,16 @@ import { PersonaComponent } from './persona/persona.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PanelModule } from 'primeng/panel';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MenubarModule } from 'primeng/menubar';
+import { DialogModule } from 'primeng/dialog';
+import { InputTextModule } from 'primeng/inputtext';
+import { ButtonModule } from 'primeng/button';
+import {ToastModule} from 'primeng/toast';
+import { MessageService } from 'primeng/api';
+import {ConfirmDialogModule} from 'primeng/confirmdialog';
+import {ConfirmationService} from 'primeng/api'
+
+
 
 @NgModule({
   declarations: [
@@ -23,8 +33,17 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     TableModule,
     HttpClientModule,
     PanelModule,
+    MenubarModule,
+    DialogModule,
+    InputTextModule,
+    ButtonModule,
+    ToastModule,
+    ConfirmDialogModule
   ],
-  providers: [],
+  providers: [
+    MessageService,
+    ConfirmationService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
